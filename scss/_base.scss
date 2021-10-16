@@ -159,6 +159,11 @@ figure{
             i{
                 background-color: $grid2Clr ;
                 color: $grid1Clr;
+                z-index: 3;
+            }
+            i:hover{
+                background-color: $grid1Clr ;
+                color: white;
             }
         }
     }
@@ -215,6 +220,18 @@ figure{
 // start map
 .map{
     @include background-image($mapImg, center, center, no-repeat, cover);
+}
+.footer{
+    form{
+        button{
+            background-color:$liteGreen;
+            color: white;
+        }
+        input{
+            border-color: rgb(158, 158, 158);
+        }
+    }
+  
 }
 // end map
 //###################################
@@ -288,5 +305,31 @@ figure{
         }
 }
 // end comments
+//start footer
+.footer{
+    .contact{
+        form{
+            input{
+                width: 70%;
+                margin:0px auto
+            }
+            button{
+                width: 30%;
+                margin:0px auto
+            }
+           
+        }
+    }
+    .blogg{
+        .blog__img{width: 25%;}
+        .blog__text{width: 75%;}
 
+    }
+    .gallery{
+        li{
+            width: 20%;
+        }
+    }
+}
+// end footer
 }
