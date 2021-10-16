@@ -1,0 +1,292 @@
+//general
+h3{
+    font-family: 'Birthstone', sans-serif;
+}
+.specialFont{font-family: 'Birthstone', sans-serif;}
+h1,h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+a{text-decoration: none;}
+figure{
+    margin: 0 !important;
+}
+.p__clr{color: $paragraphColor;}
+.icon__clr{color:$liteGreen}
+.head__line:after {
+	content: '';
+	display: block;
+	width: 10%;
+    margin: 1rem auto;
+	height: 2px;
+	background-color:$grid1Clr ;
+}
+    .movingHover:hover{
+        transition: all 1s ;
+        transform: translate(-10px,-10px);
+        box-shadow: 5px 10px $liteGreen;
+    }
+    .movingHover:hover .overlay{
+        opacity: 0.7;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;   
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background: linear-gradient(to bottom, $grid1Clr,$grid2Clr);
+    }
+    .hd__style{
+        text-align: center;
+        width: 70%;
+        margin: 0px auto 10px;
+        h2{
+            text-transform: uppercase;
+        }
+    }
+    //1 header and nav
+.main__header{
+    height: 100vh;
+    position: relative;
+    @include background-image($headerImg, center, center, no-repeat, cover);
+    nav{
+        .navbar-collapse{
+            .nav-item{
+                .nav-link{
+                    color: white;
+                padding: 10px 20px;
+                text-transform: uppercase;
+            }
+                
+                .nav-link:hover{
+                    color: $yellowNav;
+                }
+            }
+            
+        }
+    }
+    .card__sliderNav{
+        height: 80%;
+        .container{
+            height: 100%;
+
+            .carousel-inner{
+                color: white;
+                height: 100%;
+               
+                .header__slider{
+                    width: 60%;
+                    h2{
+                        font-family: 'Birthstone', sans-serif;
+                        font-size: 4rem;
+                    }
+                    h1{
+                   
+                        text-transform: uppercase;
+                        font-size: 6rem;
+                    }
+                    .head__line:after{
+                        background-color: white;
+                        margin-bottom: 1rem;
+                    }
+                    a{
+                        padding: 10px 2rem;
+                        border:1px solid #fff;
+                        color: white;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+    
+}
+// end header
+//2 start about us 
+.about__us{
+    .about__body{
+        .item{
+            figure{
+                transition-duration: 2s;
+            }
+        }
+    }
+}
+//2 end about us
+//3 start status
+.status{
+    background-color: #95E1D3;
+}
+// 3 end status
+// 5 start design
+.design__section{
+    
+    @include background-image($designImg, center, center, no-repeat, cover);
+    .ipad{
+        position: relative;
+    }
+    .mobile{
+        position: absolute;
+        bottom: -4rem;
+        right: -1rem;
+        
+    }
+}
+// 5 end design
+//6 start second services 
+.second__services{
+    .second__services__body{
+        .accordion-collapse{
+            max-height: 200px;
+            overflow: auto
+        }
+    }
+}
+//6 end second services 
+// 7 icon slider
+.card__slider{
+    background-color: $greyBG;
+}
+// 7 icon slider
+//8 start 3workers
+.stuff__section{
+    .stuff__section__body{
+        .overlay{
+            i{
+                background-color: $grid2Clr ;
+                color: $grid1Clr;
+            }
+        }
+    }
+}
+//8 end 3workers
+// 9 start logos
+.logos{
+    background-color: $logoBgClr;
+}
+// 9 end logos
+
+//10 start gallery
+.gallery__section{
+    .contain{
+        position: relative;
+    }
+    .contain:hover .overlay{
+        opacity: 0.5
+    }
+}
+//10 end gallery
+//11 start comments
+.comments{
+    @include background-image($commentsImg, center, center, no-repeat, cover);
+        figure{
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .commets__body{
+            .head__line::after{
+                margin: 1rem 0;
+                width: 20%;
+            }
+        }
+}
+//11 end comments
+//12 start blog
+.blog{
+    .blog__body{
+        .little__card{
+            bottom: 0px;
+            left: -10px;
+            background-color:#95E1D3 ;
+            padding: 0.8rem 1rem;
+            color: white;
+            span{
+                display:block;
+            }
+            
+        }
+    }
+}
+//12 end blog
+// start map
+.map{
+    @include background-image($mapImg, center, center, no-repeat, cover);
+}
+// end map
+//###################################
+@media (max-width:992px) {
+    .main__header{
+        .card__sliderNav{
+            .container{
+                .carousel-inner{
+                    color: white;
+                    height: 100%;
+                    .header__slider{
+                        width: 90%;
+                        h2{font-size: 2rem;}
+                        h1{                                       
+                            font-size: 4rem;
+                        }
+                    }  
+                }
+            }      
+        }      
+    }
+}
+@media (max-width:576px) {
+    .main__header{
+        min-height: 100vh;
+        .card__sliderNav{
+            .container{  
+                .carousel-inner{
+                    color: white;
+                    height: 100%;
+                    .header__slider{
+                        h1{              
+                            text-transform: uppercase;
+                            font-size: 3rem;
+                        }  
+                }
+                }
+            }     
+        }    
+    }
+    // services
+    .services{
+        .services__body{
+            text-align: center;
+            i{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .design__section{
+    
+    .mobile{
+        img{
+            display: none;
+        }
+        
+    }
+}
+.second__services{
+    .second__services__body{
+        img{
+            margin-bottom: 1rem;
+        }
+    }
+}
+// start comments
+.comments{
+    
+        figure{
+            width: 50%;
+        }
+}
+// end comments
+
+}
